@@ -1,0 +1,232 @@
+<!-- Css Flexbox -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Design A</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+         :root {
+      --orange: hsl(31, 77%, 52%);
+      --dcyan: hsl(184, 100%, 22%);
+      --vdcyan: hsl(179, 100%, 13%);
+      --twhite: hsla(0, 0%, 100%, 0.75);
+      --vlight-gray: hsl(0, 0%, 95%);
+      --lexend: "Lexend Deca", sans-serif;
+      --big: "Big Shoulders Display", cursive;
+    }
+        *,
+        ::before,
+        ::after {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        html,
+        body,
+        .container {
+          width: 100%;
+          background-color: var(--vlight-gray);
+        }
+        body{
+            font-size: 15px;
+            font-family: var(--lexend);
+        }
+        h1{
+            font-weight: 700;
+            font-family: var(--big);
+            color: var(--vlight-gray);
+        }
+        p {
+          padding: 5px;
+          line-height: 1.5rem;
+          font-weight: 400;
+      color: var(--twhite);
+    }
+    .container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 81rem;
+      min-width: 26.6rem;
+      padding: 2rem;
+    }
+
+    .card {
+      min-width: 20rem;
+      max-width: 30.5rem;
+      min-height: 27rem;
+      padding: 2.5rem 1rem 2.5rem 3rem;
+      margin: 0.01px;
+      position: relative;
+    }
+    
+    .logo img {
+      width: 3.5rem;
+    }
+
+    .card1 {
+      background-color: var(--orange);
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .card2 {
+      background-color: var(--dcyan);
+    }
+
+    .card3 {
+      background-color: var(--vdcyan);
+      border-radius: 0 0 1rem 1rem;
+    }
+    button {
+      width: 7rem;
+       height: 2.5rem;
+      padding: 8px;
+      font-size: 0.9rem;
+      border-radius: 1.5rem;
+      bottom: 2.8rem;
+      position: absolute;
+    }
+    button:active{
+      background-color: var(--vlight-gray);
+      border: 2px solid var(--vlight-gray);
+    }
+    #button1{
+      color: var(--orange);
+    }
+    #button1:active {
+      background-color: transparent;
+      color: var(--vlight-gray);
+      transition: all 0.1s;
+
+    }
+    #button2{
+      color: var(--dcyan);
+    }
+    #button2:active{
+      background-color: transparent;
+      color: var(--vlight-gray);
+      transition: all 0.1s;
+    }
+    #button3{
+      color: var(--vdcyan);
+    }
+    #button3:active{
+      background-color: transparent;
+      color: var(--vlight-gray);
+      transition: all 0.1s;
+    }
+        @media screen and (min-width: 350px) {
+     p{
+        padding-right: 1.5rem;
+     }
+    }
+    @media screen and (min-width:600px){
+      
+     .container{
+       min-width: 64rem;
+       flex-flow: row nowrap;
+       margin-top: 1.5rem;
+       gap: 0;
+     }
+     .logo img {
+       width: 6rem;
+     }
+     .card{
+       height: 50rem;
+       padding: 4.5rem 2rem 4rem 3rem;
+     }
+
+     .card1{
+       border-radius: 1rem 0 0 1rem;
+     }
+     .card3{
+       border-radius: 0 1rem 1rem 0;
+     }
+     button{
+       width: 7rem;
+       height: 2.5rem;
+       font-size: 1.1rem;
+       bottom: 4.7rem;
+     }
+     h1{
+       padding: 2.5rem, 0;
+     }
+     p{
+       line-height: 2rem;
+     }
+    }
+    @media screen and (min-width: 800px) {
+      h1{
+        padding: 3rem 0;
+      }
+      .card{
+        padding: 5rem 3rem 5rem 5rem;
+      }
+      .logo img {
+        width: 6.7rem;
+      }
+      button{
+        font-size: 1.0rem;
+      }
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <div id="navbar">
+        <nav>
+        <a style="color: navy" class="a1" href="design.html">Design A</a>
+        <a class="a1" href="design2.html">Design B</a>
+        </nav>
+    </div>
+  </header>
+    <main class="container">
+        <div class="card card1">
+          <div class="logo">
+          <img src="icon-sedans.svg" alt="Sedan image">
+        </div>
+        <div class="card-content">
+          <h1>Sedan</h1>
+             <p>
+    ​        Choose a sedan for its<br>affordability and excellent<br>fuel economy. Ideal for<br>cruising in the city or on<br>your next road trip.
+    ​      ​</p>
+  </div>
+    ​     <button id="button1">Learn More</button>
+    ​    ​</div>
+    
+    ​  <div class="card card2">
+      <div class="logo">
+            <img src="icon-suvs.svg" alt="SUVs image">
+      </div>
+      <div class="card-content">
+            ​<h1>SUVs</h1>
+    ​      <p>
+    ​       Take an SUV for its spacious<br>interior, power, and<br>versatility. Perfect for your<br>next family vacation and<br>off-road adventures.
+    ​      </p>
+  </div>
+
+    ​     <button id="button2">Learn More​</button>
+    ​    ​</div>
+  
+    ​     <div class="card card3">
+      <div class="logo">
+    ​        <img src="icon-luxury.svg" alt="​Luxury Image​">
+      </div>
+      <div class="card-content">
+    ​       <h1>​Luxury​</h1>
+    ​      ​<p>
+             Cruise in the best car brands<br>without the bloated prices.<br>Enjoy the enhanced comfort<br>of a luxury rental and arrive in style.
+      </p>
+      </div>
+    ​     ​<button id="button3">Learn More​</button>
+    ​    ​</div>
+      </main>
+</body>
+</html>
